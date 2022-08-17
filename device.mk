@@ -9,7 +9,7 @@ DEVICE_PATH := device/xiaomi/wayne
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-kscope
+    $(DEVICE_PATH)/overlay-arrow
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
