@@ -2,12 +2,12 @@
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@6.0::IDevicesFactory/default</fqname>
+        <fqname>@4.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <fqname>@6.0::IEffectsFactory/default</fqname>
+        <fqname>@4.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -17,7 +17,7 @@
     <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
+        <fqname>@1.0::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
@@ -34,8 +34,8 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::ICryptoFactory/default</fqname>
         <fqname>@1.0::IDrmFactory/default</fqname>
-        <fqname>@1.2::ICryptoFactory/widevine</fqname>
-        <fqname>@1.2::IDrmFactory/widevine</fqname>
+        <fqname>@1.1::ICryptoFactory/widevine</fqname>
+        <fqname>@1.1::IDrmFactory/widevine</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -84,7 +84,7 @@
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
-        <fqname>@2.3::ISoundTriggerHw/default</fqname>
+        <fqname>@2.0::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -329,6 +329,6 @@
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.mlipay</name>
         <transport>hwbinder</transport>
-        <fqname>@1.1::IMlipayService/default</fqname>
+        <fqname>@1.0::IMlipayService/default</fqname>
     </hal>
 </manifest>
