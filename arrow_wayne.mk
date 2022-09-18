@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Inherit some common Kaleidoscope stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
-DEVICE_MAINTAINER := xiaoleGun
+DEVICE_MAINTAINER := kavencat
 
 # Inherit from wayne device
 $(call inherit-product, device/xiaomi/wayne/device.mk)
