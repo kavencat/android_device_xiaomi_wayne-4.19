@@ -409,7 +409,7 @@ PRODUCT_PACKAGES += \
 
 # miplay
 PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.0
+    vendor.xiaomi.hardware.mlipay@1.0.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
