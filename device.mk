@@ -407,6 +407,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# miplay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.0
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
@@ -420,6 +424,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \
+    
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
