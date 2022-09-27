@@ -16,6 +16,9 @@ TARGET_USES_UM_4_19 := true
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-arrow
+    
+# PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
+PRODUCT_SHIPPING_API_LEVEL := 27
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
