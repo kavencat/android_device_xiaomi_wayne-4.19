@@ -6,6 +6,12 @@
 
 DEVICE_PATH := device/xiaomi/wayne
 
+# Board
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := sdm660
+TARGET_BOARD_PLATFORM := sdm660
+TARGET_USES_UM_4_19 := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
