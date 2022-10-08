@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Kaleidoscope stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from wayne device
 $(call inherit-product, device/xiaomi/wayne/device.mk)
@@ -29,18 +29,3 @@ PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_BOOT_ANIMATION_RES := 1080
-
-CHERISH_BUILD_TYPE := OFFICIAL
-CHERISH_VANILLA := false
-
-# Inherit ShapeShiftOS Official build stuff.
-CHERISH_BUILD_TYPE := OFFICIAL
-TARGET_FACE_UNLOCK_SUPPORTED := true
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=kavencat
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.cherish.cpu=SDM660
-
-# GApps
-TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_STOCK_ARCORE := true
