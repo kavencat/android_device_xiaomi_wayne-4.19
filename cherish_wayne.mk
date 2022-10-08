@@ -24,7 +24,7 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := cherish_wayne
+PRODUCT_NAME := arrow_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
