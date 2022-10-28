@@ -6,7 +6,7 @@
 
 # Inherit ShapeShiftOS Official build stuff.
 ARROW_GAPPS := true
-ARROW_OFFICIAL := false
+ARROW_OFFICIAL := true
 DEVICE_MAINTAINER := kavencat
 
 # Inherit from those products. Most specific first.
