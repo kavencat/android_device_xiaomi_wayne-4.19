@@ -4,20 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit ShapeShiftOS Official build stuff.
-ARROW_GAPPS := true
-ARROW_OFFICIAL := true
-DEVICE_MAINTAINER := kavencat
+# PixelExperience Properties
+TARGET_INCLUDE_WIFI_EXT := true
 TARGET_GAPPS_ARCH := arm64
-TARGET_VENDOR_DEVICE_NAME := wayne
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit ShapeShiftOS product configuration
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from wayne device
 $(call inherit-product, device/xiaomi/wayne/device.mk)
@@ -26,7 +24,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := wayne
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI 6X
-PRODUCT_NAME := arrow_wayne
+PRODUCT_NAME := aosp_wayne
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -36,7 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="wayne-user 8.1.0 OPM1.171019.011 V9.5.11.0.ODCCNFA release-keys"
 
 BUILD_FINGERPRINT := xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA:user/release-keys
-
-# Updater
-PRODUCT_PACKAGES += \
-    Updater
