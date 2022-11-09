@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_wayne.mk
+    $(LOCAL_DIR)/aosp_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_wayne-user \
-    arrow_wayne-userdebug \
-    arrow_wayne-eng
+    aosp_wayne-user \
+    aosp_wayne-userdebug \
+    aosp_wayne-eng
