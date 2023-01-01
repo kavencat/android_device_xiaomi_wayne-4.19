@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_wayne.mk
+    $(LOCAL_DIR)/tequila_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_wayne-userdebug \
-    lineage_wayne-user \
-    lineage_wayne-eng
+    tequila_wayne-userdebug \
+    tequila_wayne-user \
+    tequila_wayne-eng
