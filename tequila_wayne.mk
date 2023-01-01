@@ -38,9 +38,6 @@ TARGET_BUILD_GAPPS := true
 # tequila
 TEQUILA_BUILDTYPE := OFFICIAL
 
-#TARGE_USE_EROFS := true
-TARGE_USE_EROFS := flase
-
 # Build Description
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="wayne-user 9 PKQ1.180904.001 V10.3.4.0.PDCCNXM release-keys"
