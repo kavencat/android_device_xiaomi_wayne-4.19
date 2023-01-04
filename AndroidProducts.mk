@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/tequila_wayne.mk
+    $(LOCAL_DIR)/cherish_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    tequila_wayne-userdebug \
-    tequila_wayne-user \
-    tequila_wayne-eng
+    cherish_wayne-userdebug \
+    cherish_wayne-user \
+    cherish_wayne-eng
