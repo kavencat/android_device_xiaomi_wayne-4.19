@@ -17,7 +17,8 @@ PRODUCT_COMPRESSED_APEX := false
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-tequila
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
@@ -118,7 +119,7 @@ PRODUCT_PACKAGES += \
     libgralloc.qti \
     libtinyxml \
     libqdMetaData \
-    libqdMetaData.system 
+    libqdMetaData.system
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
