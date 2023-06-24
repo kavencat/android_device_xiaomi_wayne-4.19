@@ -86,6 +86,15 @@ typedef enum {
     QCAMERA_CH_TYPE_MAX
 } qcamera_ch_type_enum_t;
 
+typedef enum
+    {
+        CAMERA_CMD_LONGSHOT_ON,
+        CAMERA_CMD_LONGSHOT_OFF,
+        CAMERA_CMD_HISTOGRAM_ON,
+        CAMERA_CMD_HISTOGRAM_OFF,
+        CAMERA_CMD_HISTOGRAM_SEND_DATA
+    } qcamera_sm_cmd_type_t;
+
 typedef struct {
     int32_t msg_type;
     int32_t ext1;
@@ -136,7 +145,12 @@ typedef enum {
     QCAMERA_METADATA_FD,
     QCAMERA_METADATA_HDR,
     QCAMERA_METADATA_LED_CALIB,
-    QCAMERA_METADATA_RTB
+    QCAMERA_METADATA_RTB,
+    CAMERA_MSG_META_DATA,
+    CAMERA_META_DATA_HDR,
+    CAMERA_META_DATA_ASD,
+    CAMERA_META_DATA_FD,
+    CAMERA_FRAME_DATA_FD
 } cam_manual_capture_type;
 
 typedef void (*camera_release_callback)(void *user_data,
