@@ -9815,43 +9815,43 @@ int32_t QCamera2HardwareInterface::processFaceDetectionResult(cam_faces_data_t *
             mFaceRect.right = detect_data->faces[i].face_boundary.width+mFaceRect.left;
             mFaceRect.bottom = detect_data->faces[i].face_boundary.height+mFaceRect.top;
 #endif
-            if (faces_data->smile_valid) {
-                faces[i].smile_degree = faces_data->smile_data.smile[i].smile_degree;
-                faces[i].smile_score = faces_data->smile_data.smile[i].smile_confidence;
+            //if (faces_data->smile_valid) {
+                //faces[i].smile_degree = faces_data->smile_data.smile[i].smile_degree;
+                //faces[i].smile_score = faces_data->smile_data.smile[i].smile_confidence;
 
-                LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : smile_degree=%d, smile_score=%d",
-                        detect_data->frame_id, i, faces[i].smile_degree, faces[i].smile_score);
-            }
-            if (faces_data->blink_valid) {
-                faces[i].blink_detected = faces_data->blink_data.blink[i].blink_detected;
-                faces[i].leye_blink = faces_data->blink_data.blink[i].left_blink;
-                faces[i].reye_blink = faces_data->blink_data.blink[i].right_blink;
+                //LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : smile_degree=%d, smile_score=%d",
+                        //detect_data->frame_id, i, faces[i].smile_degree, faces[i].smile_score);
+            //}
+            //if (faces_data->blink_valid) {
+                //faces[i].blink_detected = faces_data->blink_data.blink[i].blink_detected;
+                //faces[i].leye_blink = faces_data->blink_data.blink[i].left_blink;
+                //faces[i].reye_blink = faces_data->blink_data.blink[i].right_blink;
 
-                LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : "
-                        "blink_detected=%d, leye_blink=%d, reye_blink=%d",
-                        detect_data->frame_id, i, faces[i].blink_detected, faces[i].leye_blink,
-                        faces[i].reye_blink);
-            }
-            if (faces_data->recog_valid) {
-                faces[i].face_recognised = faces_data->recog_data.face_rec[i].face_recognised;
+                //LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : "
+                        //"blink_detected=%d, leye_blink=%d, reye_blink=%d",
+                        //detect_data->frame_id, i, faces[i].blink_detected, faces[i].leye_blink,
+                        //faces[i].reye_blink);
+            //}
+            //if (faces_data->recog_valid) {
+                //faces[i].face_recognised = faces_data->recog_data.face_rec[i].face_recognised;
 
-                LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : face_recognised=%d",
-                        detect_data->frame_id, i, faces[i].face_recognised);
-            }
-            if (faces_data->gaze_valid) {
-                faces[i].gaze_angle = faces_data->gaze_data.gaze[i].gaze_angle;
-                faces[i].updown_dir = faces_data->gaze_data.gaze[i].updown_dir;
-                faces[i].leftright_dir = faces_data->gaze_data.gaze[i].leftright_dir;
-                faces[i].roll_dir = faces_data->gaze_data.gaze[i].roll_dir;
-                faces[i].left_right_gaze = faces_data->gaze_data.gaze[i].left_right_gaze;
-                faces[i].top_bottom_gaze = faces_data->gaze_data.gaze[i].top_bottom_gaze;
+                //LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : face_recognised=%d",
+                        //detect_data->frame_id, i, faces[i].face_recognised);
+            //}
+            //if (faces_data->gaze_valid) {
+                //faces[i].gaze_angle = faces_data->gaze_data.gaze[i].gaze_angle;
+                //faces[i].updown_dir = faces_data->gaze_data.gaze[i].updown_dir;
+                //faces[i].leftright_dir = faces_data->gaze_data.gaze[i].leftright_dir;
+                //faces[i].roll_dir = faces_data->gaze_data.gaze[i].roll_dir;
+                //faces[i].left_right_gaze = faces_data->gaze_data.gaze[i].left_right_gaze;
+                //faces[i].top_bottom_gaze = faces_data->gaze_data.gaze[i].top_bottom_gaze;
 
-                LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : gaze_angle=%d, updown_dir=%d, "
-                        "leftright_dir=%d,, roll_dir=%d, left_right_gaze=%d, top_bottom_gaze=%d",
-                        detect_data->frame_id, i, faces[i].gaze_angle, faces[i].updown_dir,
-                        faces[i].leftright_dir, faces[i].roll_dir, faces[i].left_right_gaze,
-                        faces[i].top_bottom_gaze);
-            }
+                //LOGL("FD_DEBUG LANDMARK : Frame[%d] : Face[%d] : gaze_angle=%d, updown_dir=%d, "
+                        //"leftright_dir=%d,, roll_dir=%d, left_right_gaze=%d, top_bottom_gaze=%d",
+                        //detect_data->frame_id, i, faces[i].gaze_angle, faces[i].updown_dir,
+                        //faces[i].leftright_dir, faces[i].roll_dir, faces[i].left_right_gaze,
+                        //faces[i].top_bottom_gaze);
+            //}
 #endif
 
         }
