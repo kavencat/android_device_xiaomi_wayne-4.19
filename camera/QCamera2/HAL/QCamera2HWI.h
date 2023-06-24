@@ -150,7 +150,8 @@ typedef enum {
     CAMERA_META_DATA_HDR,
     CAMERA_META_DATA_ASD,
     CAMERA_META_DATA_FD,
-    CAMERA_FRAME_DATA_FD
+    CAMERA_FRAME_DATA_FD,
+    CAMERA_MSG_STATS_DATA
 } cam_manual_capture_type;
 
 typedef void (*camera_release_callback)(void *user_data,
