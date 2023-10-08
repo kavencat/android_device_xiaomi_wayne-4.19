@@ -7337,9 +7337,10 @@ int QCamera3HardwareInterface::processCaptureRequest(
 
             // e.g. If we used video HDR in camcorder mode but are not using HDR in picture
             // mode, sensor HDR should be disabled here
-            if (!didSetSensorHdr)
-                setSensorHDR(params, false, false);
-                mShouldSetSensorHdr = false;
+			if (!didSetSensorHdr) {
+				setSensorHDR(params, false, false);
+				mShouldSetSensorHdr = false;
+			}
 
             //TODO: validate the arguments, HSV scenemode should have only the
             //advertised fps ranges
