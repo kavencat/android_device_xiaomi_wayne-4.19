@@ -183,16 +183,26 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
+    
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gnss_antenna_info.conf \
+    gps.conf \
+    apdr.conf \
+    lowi.conf \
+    sap.conf \
+    xtwifi.conf \
+    izat.conf
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    #$(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(LOCAL_PATH)/gps/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
-    $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+#    $(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+#    $(LOCAL_PATH)/gps/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
+#    $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+#    $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+#    $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+#    $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+#    $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # Healthd
 PRODUCT_PACKAGES += \
@@ -384,8 +394,12 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    qti-telephony-utils-prd \
+    qti-telephony-utils_prd.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -421,9 +435,13 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
+    libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
