@@ -32,7 +32,7 @@ namespace implementation {
 
 static AGnss* spAGnss = nullptr;
 
-AGnss::AGnss(Gnss* gnss) : mGnss(gnss), mType(LOC_AGPS_TYPE_INVALID) {
+AGnss::AGnss(Gnss* gnss) : mGnss(gnss) {
     spAGnss = this;
 }
 
@@ -84,13 +84,8 @@ void AGnss::statusCb(AGpsExtType type, LocAGpsStatusValue status) {
         return;
     }
 
-    mMutex.lock();
-    // cache the AGps Type
-    mType = type;
-    auto aGnssCbIface = mAGnssCbIface;
-    mMutex.unlock();
-    if (aGnssCbIface != nullptr) {
-        auto r = aGnssCbIface->agnssStatusCb(aType, aStatus);
+    if (mAGnssCbIface != nullptr) {
+        auto r = mAGnssCbIface->agnssStatusCb(aType, aStatus);
         if (!r.isOk()) {
             LOC_LOGw("Error invoking AGNSS status cb %s", r.description().c_str());
         }
@@ -108,9 +103,7 @@ Return<void> AGnss::setCallback(const sp<V2_0::IAGnssCallback>& callback) {
     }
 
     // Save the interface
-    mMutex.lock();
     mAGnssCbIface = callback;
-    mMutex.unlock();
 
     AgpsCbInfo cbInfo = {};
     cbInfo.statusV4Cb = (void*)agnssStatusIpV4Cb;
@@ -145,20 +138,18 @@ Return<bool> AGnss::dataConnFailed() {
 Return<bool> AGnss::dataConnOpen(uint64_t /*networkHandle*/, const hidl_string& apn,
         V2_0::IAGnss::ApnIpType apnIpType) {
 
-    if (mGnss == nullptr || mGnss->getGnssInterface() == nullptr){
+    if(mGnss == nullptr || mGnss->getGnssInterface() == nullptr){
         LOC_LOGE("Null GNSS interface");
         return false;
     }
 
-    std::string apnString(apn.c_str());
-    // During Emergency SUPL, an apn name of "sos" means that no
-    // apn was found, like in the simless case, so apn is cleared
-    if (LOC_AGPS_TYPE_SUPL_ES == mType && "sos" == apnString) {
-        LOC_LOGD("dataConnOpen APN name = [sos] cleared");
-        apnString.clear();
+    /* Validate */
+    if(apn.empty()){
+        LOC_LOGE("Invalid APN");
+        return false;
     }
 
-    LOC_LOGD("dataConnOpen APN name = [%s]", apnString.c_str());
+    LOC_LOGD("dataConnOpen APN name = [%s]", apn.c_str());
 
     AGpsBearerType bearerType;
     switch (apnIpType) {
@@ -177,7 +168,7 @@ Return<bool> AGnss::dataConnOpen(uint64_t /*networkHandle*/, const hidl_string& 
     }
 
     mGnss->getGnssInterface()->agpsDataConnOpen(
-        LOC_AGPS_TYPE_SUPL, apnString.c_str(), apnString.size(), (int)bearerType);
+        LOC_AGPS_TYPE_SUPL, apn.c_str(), apn.size(), (int)bearerType);
     return true;
 }
 
