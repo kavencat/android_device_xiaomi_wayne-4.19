@@ -274,6 +274,7 @@ PRODUCT_PACKAGES += \
     
 # Miplay
 PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.0 \
     vendor.xiaomi.hardware.mlipay@1.1
 
 # Low power Whitelist
