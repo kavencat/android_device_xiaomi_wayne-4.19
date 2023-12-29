@@ -270,6 +270,10 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.wayne
+    
+# Miplay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
