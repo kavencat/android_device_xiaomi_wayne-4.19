@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_wayne.mk
+    $(LOCAL_DIR)/superior_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_wayne-userdebug \
-    aosp_wayne-user \
-    aosp_wayne-eng
+    superior_wayne-userdebug \
+    superior_wayne-user \
+    superior_wayne-eng
